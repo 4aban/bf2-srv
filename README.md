@@ -1,6 +1,6 @@
 # BF2 Web Admin
 
-Dockerized Battlefield 2 server based on [nihlen/bf2vWebAdmin](https://github.com/nihlen/bf2WebAdmin).
+Dockerized Battlefield 2 server based on [nihlen/bf2vWebAdmin](https://github.com/nihlen/bf2srvWAdmin).
 
 A Battlefield 2 mod server with administration through a web interface or Discord. The aim is to be a replacement for some of the BF2CC features and also create new behavior through modules written in C# for a better dev experience.
 
@@ -51,15 +51,15 @@ and then rerun the docker-compose up-command.
 
 This is an example of webadmin and two Battlefield 2 servers running on the same host.
 
-If you want to display the country of the players when joining then you need a free GeoIP database file from MaxMind and place `GeoLite2-Country.mmdb` in the same directory as `appsecrets.json`. Then bind mount it the same way in the volume section of the bf2-webadmin service `- "./GeoLite2-Country.mmdb:/app/GeoLite2-Country.mmdb"`.
+If you want to display the country of the players when joining then you need a free GeoIP database file from MaxMind and place `GeoLite2-Country.mmdb` in the same directory as `appsecrets.json`. Then bind mount it the same way in the volume section of the bf2srv-wadmin service `- "./GeoLite2-Country.mmdb:/app/GeoLite2-Country.mmdb"`.
 
 docker-compose.yml
 ```yaml
 version: "3.3"
 services:
-  bf2-webadmin:
-    container_name: bf2-webadmin
-    image: "4aban/bf2-webadmin:latest"
+  bf2srv-wadmin:
+    container_name: bf2srv-wadmin
+    image: "4aban/bf2srv-wadmin:latest"
     restart: on-failure
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
@@ -84,7 +84,7 @@ services:
       - ENV_GAMESPY_PORT=29900
       - ENV_DEMOS_URL=http://www.example.com/
       - ENV_RCON_PASSWORD=rconpw123
-      - ENV_BF2SRVWEBADMIN_HOST=bf2-webadmin
+      - ENV_BF2SRVWEBADMIN_HOST=bf2srv-wadmin
       - ENV_BF2SRVWEBADMIN_PORT=4300
       - ENV_BF2SRVWEBADMIN_TIMER_INTERVAL=300
       - ENV_API_KEY=apikey123
@@ -110,7 +110,7 @@ services:
       - ENV_GAMESPY_PORT=29901
       - ENV_DEMOS_URL=http://www.example.com/
       - ENV_RCON_PASSWORD=rconpw123
-      - ENV_BF2SRVWEBADMIN_HOST=bf2-webadmin
+      - ENV_BF2SRVWEBADMIN_HOST=bf2srv-wadmin
       - ENV_BF2SRVWEBADMIN_PORT=4300
       - ENV_BF2SRVWEBADMIN_TIMER_INTERVAL=300
       - ENV_API_KEY=apikey123
