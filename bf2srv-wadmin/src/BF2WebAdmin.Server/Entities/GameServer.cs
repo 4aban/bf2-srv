@@ -7,8 +7,8 @@ using BF2WebAdmin.Server.Constants;
 using BF2WebAdmin.Server.Extensions;
 using BF2WebAdmin.Shared;
 using BF2WebAdmin.Shared.Communication.DTOs;
-using 4aban.Common.Telemetry;
-using 4aban.Gamespy;
+using TVbug.Common.Telemetry;
+using TVbug.Gamespy;
 
 namespace BF2WebAdmin.Server.Entities;
 

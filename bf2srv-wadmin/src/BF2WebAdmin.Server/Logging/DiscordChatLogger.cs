@@ -1,7 +1,7 @@
 ﻿using System.Diagnostics;
 using BF2WebAdmin.Server.Configuration.Models;
 using Microsoft.Extensions.Options;
-using 4aban.Common.Telemetry;
+using TVbug.Common.Telemetry;
 
 namespace BF2WebAdmin.Server.Logging;
 

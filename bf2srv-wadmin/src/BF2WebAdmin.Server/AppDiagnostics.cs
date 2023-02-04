@@ -1,7 +1,7 @@
 using System.Diagnostics;
 using System.Diagnostics.Metrics;
 using System.Runtime.CompilerServices;
-using 4aban.Common.Telemetry;
+using TVbug.Common.Telemetry;
 
 namespace BF2WebAdmin.Server;
 

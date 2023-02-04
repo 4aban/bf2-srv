@@ -17,7 +17,7 @@ using BF2WebAdmin.Server.Services;
 using Microsoft.AspNetCore.SignalR;
 using Microsoft.Data.SqlClient;
 using Microsoft.EntityFrameworkCore;
-using 4aban.Common.Telemetry;
+using TVbug.Common.Telemetry;
 using Polly;
 using Polly.Registry;
 

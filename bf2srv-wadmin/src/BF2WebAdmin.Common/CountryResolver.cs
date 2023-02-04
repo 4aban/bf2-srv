@@ -1,7 +1,7 @@
 ﻿using System;
 using MaxMind.GeoIP2;
 using MaxMind.GeoIP2.Responses;
-using 4aban.Common.Telemetry;
+using TVbug.Common.Telemetry;
 
 namespace BF2WebAdmin.Common;
 

@@ -1,7 +1,7 @@
 ﻿// ReSharper disable All
 using System;
 
-namespace 4aban.Message;
+namespace TVbug.Message;
 
 /// <summary>
 /// Start a stream a game or optional match

@@ -1,6 +1,6 @@
 ﻿using System.Net;
 using Microsoft.Extensions.Options;
-using 4aban.Common.Telemetry;
+using TVbug.Common.Telemetry;
 
 namespace BF2WebAdmin.Server;
 

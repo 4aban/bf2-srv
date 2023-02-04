@@ -7,7 +7,7 @@ using BF2WebAdmin.Server.Entities;
 using BF2WebAdmin.Server.Extensions;
 using BF2WebAdmin.Shared;
 using Microsoft.Extensions.Caching.Memory;
-using 4aban.Common.Telemetry;
+using TVbug.Common.Telemetry;
 using Polly;
 
 namespace BF2WebAdmin.Server;

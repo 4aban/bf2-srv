@@ -9,7 +9,7 @@ using System.Threading;
 using System.Threading.Tasks;
 using System.Linq;
 
-namespace 4aban.Gamespy;
+namespace TVbug.Gamespy;
 
 public static class AsyncExtensions
 {

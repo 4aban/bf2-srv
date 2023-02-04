@@ -8,7 +8,7 @@ using OpenTelemetry.Logs;
 using OpenTelemetry.Metrics;
 using OpenTelemetry.Trace;
 
-namespace 4aban.Common.Telemetry;
+namespace TVbug.Common.Telemetry;
 
 // https://docs.microsoft.com/en-us/dotnet/core/diagnostics/distributed-tracing-instrumentation-walkthroughs
 public static class TelemetryExtensions
@@ -17,7 +17,7 @@ public static class TelemetryExtensions
     /// Setup OpenTelemetry tracing and metrics to the specified endpoint for ASP.NET Core projects.
     /// </summary>
     /// <param name="services">The service collection</param>
-    /// <param name="serviceName">Service name (ex. 4aban.Common)</param>
+    /// <param name="serviceName">Service name (ex. TVbug.Common)</param>
     /// <param name="serviceVersion">Service version (ex. 1.0.0)</param>
     /// <param name="otlpEndpoint">The OpenTelemetry protocol endpoint URL. Default is http://localhost:4317 with gRPC protocol.</param>
     /// <returns></returns>

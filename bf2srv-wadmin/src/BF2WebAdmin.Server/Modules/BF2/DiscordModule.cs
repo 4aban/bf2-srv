@@ -10,7 +10,7 @@ using BF2WebAdmin.Server.Services;
 using BF2WebAdmin.Shared;
 using Discord;
 using Discord.WebSocket;
-using 4aban.Common.Telemetry;
+using TVbug.Common.Telemetry;
 using MessageType = BF2WebAdmin.Common.Entities.Game.MessageType;
 
 namespace BF2WebAdmin.Server.Modules.BF2;

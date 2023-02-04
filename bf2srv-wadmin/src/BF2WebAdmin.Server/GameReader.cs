@@ -4,7 +4,7 @@ using System.Text;
 using System.Threading.Channels;
 using BF2WebAdmin.Common.Entities.Game;
 using BF2WebAdmin.Server.Abstractions;
-using 4aban.Common.Telemetry;
+using TVbug.Common.Telemetry;
 
 namespace BF2WebAdmin.Server;
 

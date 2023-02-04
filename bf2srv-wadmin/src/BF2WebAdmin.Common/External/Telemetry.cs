@@ -11,7 +11,7 @@ using OpenTelemetry.Metrics;
 using OpenTelemetry.Resources;
 using OpenTelemetry.Trace;
 
-namespace 4aban.Common.Telemetry;
+namespace TVbug.Common.Telemetry;
 
 public static class Telemetry
 {

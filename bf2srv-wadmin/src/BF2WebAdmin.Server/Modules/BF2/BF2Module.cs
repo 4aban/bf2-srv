@@ -559,7 +559,7 @@ public class BF2Module : BaseModule,
         if (!_newPlayers.ContainsKey(e.Player.Index))
             return ValueTask.CompletedTask;
 
-        // TODO: send join message to all servers in group ([tvbug] krische joined NeTskY [DE] 2v2?)
+        // TODO: send join message to all servers in group ([tvbug] krische joined [TV]Bug [RU] 2v2?)
         _newPlayers.Remove(e.Player.Index);
 
         // No new messages when the server is reconnecting

@@ -8,8 +8,8 @@ using BF2WebAdmin.Shared.Communication.Events;
 using Mapster;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
-using 4aban.Common.Telemetry;
-using 4aban.Gamespy;
+using TVbug.Common.Telemetry;
+using TVbug.Gamespy;
 
 namespace BF2WebAdmin.Server.Hubs;
 

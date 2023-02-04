@@ -13,7 +13,7 @@ using MediatR.Registration;
 using Microsoft.AspNetCore.Authentication.Cookies;
 using Microsoft.AspNetCore.ResponseCompression;
 using Microsoft.EntityFrameworkCore;
-using 4aban.Common.Telemetry;
+using TVbug.Common.Telemetry;
 
 // Log.Logger = new LoggerConfiguration()
 //     .WriteTo.Console()

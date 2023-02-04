@@ -3,7 +3,7 @@ using System.Text.RegularExpressions;
 using BF2WebAdmin.Common.Entities.Game;
 using BF2WebAdmin.Server.Constants;
 using BF2WebAdmin.Server.Extensions;
-using 4aban.Common.Telemetry;
+using TVbug.Common.Telemetry;
 
 namespace BF2WebAdmin.Server.Abstractions;
 

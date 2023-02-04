@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 using MassTransit;
-using 4aban.Message;
+using TVbug.Message;
 using StackExchange.Redis;
 
 namespace BF2WebAdmin.Server.Services;

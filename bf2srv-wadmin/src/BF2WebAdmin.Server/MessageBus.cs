@@ -1,5 +1,5 @@
 ﻿using MassTransit;
-using 4aban.Message;
+using TVbug.Message;
 
 namespace BF2WebAdmin.Server;
 
