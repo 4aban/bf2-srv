@@ -2,9 +2,7 @@
 
 Dockerized Battlefield 2 server based on [nihlen/bf2vWebAdmin](https://github.com/nihlen/bf2srvWAdmin).
 
-A Battlefield 2 mod server with administration through a web interface or Discord. The aim is to be a replacement for some of the BF2CC features and also create new behavior through modules written in C# for a better dev experience.
-
-The communication between webadmin and the ModManager module on the Battlefield 2 server  is done over an open socket, but does not require any additional open ports on the game server.
+A Battlefield 2 mod server with administration through a web interface, Discord and BF2CC.
 
 ## Features
 * Administration through the web UI
@@ -23,9 +21,8 @@ The communication between webadmin and the ModManager module on the Battlefield 
   * Chopper Mayhem module with base protection
   * Map module for server-side modding of maps by adding buildings ingame and saving/loading your work
   * Log module to log chat and game events to file
-* Other random ingame commands 
-
-Modifying settings in `serversettings.con`, `modnanager.con` or `maplist.con` is not currently supported since these values are built into our container images and do not need to change.
+* Administration through the BF2CC
+* Other random ingame commands
 
 ## Usage
 
@@ -33,7 +30,7 @@ On your host you need to create `docker-compose.yml` and `appsecrets.json`. See 
 
 Build a Battlefield 2 server image with the required ModManager module:
 ```sh
-docker build -t bf2:bf2hub-pb-mm-webadmin https://github.com/4aban/bf2-srv.git#main
+docker build -t bf2:bf2-srv https://github.com/4aban/bf2-srv.git#main
 ```
 
 Then start up webadmin and the Battlefield 2 servers by running this command in the same directory as the `docker-compose.yml` and `appsecrets.json` files.
@@ -75,7 +72,7 @@ services:
 
   bf2-server-1:
     container_name: bf2-server-1
-    image: "bf2:bf2hub-pb-mm-webadmin"
+    image: "bf2:bf2-srv"
     restart: on-failure
     environment:
       - ENV_SERVER_NAME=Testserver 1
@@ -101,7 +98,7 @@ services:
 
   bf2-server-2:
     container_name: bf2-server-2
-    image: "bf2:bf2hub-pb-mm-webadmin"
+    image: "bf2:bf2-srv"
     restart: on-failure
     environment:
       - ENV_SERVER_NAME=Testserver 2
@@ -153,7 +150,7 @@ appsecrets.json
         "GamePort": 16567,
         "QueryPort": 29900,
         "RconPort": 4711,
-        "RconPassword": "rconpw123",
+        "RconPassword": "rconpw4444",
         "DiscordBot": {
           "Token": "",
           "AdminChannel": "",
@@ -166,7 +163,7 @@ appsecrets.json
         "GamePort": 16569,
         "QueryPort": 29901,
         "RconPort": 4711,
-        "RconPassword": "rconpw123",
+        "RconPassword": "rconpw4444",
         "DiscordBot": {
           "Token": "",
           "AdminChannel": "",

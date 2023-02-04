@@ -14,7 +14,7 @@ WORKDIR /home/bf2/tmp
 LABEL maintainer=nihlen
 
 # Environment variables
-ENV SERVER_NAME="bf2-docker"
+ENV SERVER_NAME="bf2-srv"
 
 # Copy runtime assets
 COPY ./assets/runtime ./

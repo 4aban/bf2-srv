@@ -10,9 +10,5 @@ node_modules/
 *.secret.*
 *.secret
 
-# SQLite DB
-*.db
-*.sqlite*
-
 # Mac tumbs
 .DS_Store
