@@ -6,27 +6,23 @@ WORKDIR /app
 EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
-
 WORKDIR /src
-
-COPY ["src/bf2srv-wadmin.Server/bf2srv-wadmin.Server.csproj", "src/bf2srv-wadmin.Server/"]
-COPY ["src/bf2srv-wadmin.Data/bf2srv-wadmin.Data.csproj", "src/bf2srv-wadmin.Data/"]
-COPY ["src/bf2srv-wadmin.Common/bf2srv-wadmin.Common.csproj", "src/bf2srv-wadmin.Common/"]
-COPY ["src/bf2srv-wadmin.Shared/bf2srv-wadmin.Shared.csproj", "src/bf2srv-wadmin.Shared/"]
-COPY ["src/bf2srv-wadmin.Blazor/bf2srv-wadmin.Blazor.csproj", "src/bf2srv-wadmin.Blazor/"]
-
+COPY ["src/BF2WebAdmin.Server/BF2WebAdmin.Server.csproj", "src/BF2WebAdmin.Server/"]
+COPY ["src/BF2WebAdmin.Data/BF2WebAdmin.Data.csproj", "src/BF2WebAdmin.Data/"]
+COPY ["src/BF2WebAdmin.Common/BF2WebAdmin.Common.csproj", "src/BF2WebAdmin.Common/"]
+COPY ["src/BF2WebAdmin.Shared/BF2WebAdmin.Shared.csproj", "src/BF2WebAdmin.Shared/"]
+COPY ["src/BF2WebAdmin.Blazor/BF2WebAdmin.Blazor.csproj", "src/BF2WebAdmin.Blazor/"]
 COPY ./nuget.config /src/nuget.config
-
-RUN dotnet restore "src/bf2srv-wadmin.Server/bf2srv-wadmin.Server.csproj" --configfile ./nuget.config
-
+RUN dotnet restore "src/BF2WebAdmin.Server/BF2WebAdmin.Server.csproj" --configfile ./nuget.config
+#RUN dotnet restore "src/BF2WebAdmin.Server/BF2WebAdmin.Server.csproj"
 COPY . .
-WORKDIR "/src/src/bf2srv-wadmin.Server"
-RUN dotnet build "bf2srv-wadmin.Server.csproj" -c Release -o /app/build
+WORKDIR "/src/src/BF2WebAdmin.Server"
+RUN dotnet build "BF2WebAdmin.Server.csproj" -c Release -o /app/build
 
 FROM build AS publish
-RUN dotnet publish "bf2srv-wadmin.Server.csproj" -c Release -o /app/publish
+RUN dotnet publish "BF2WebAdmin.Server.csproj" -c Release -o /app/publish
 
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
-ENTRYPOINT ["dotnet", "bf2srv-wadmin.Server.dll"]
+ENTRYPOINT ["dotnet", "BF2WebAdmin.Server.dll"]
