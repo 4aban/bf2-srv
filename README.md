@@ -1,7 +1,5 @@
 # BF2 Web Admin
 
-Dockerized Battlefield 2 server based on [nihlen/bf2vWebAdmin](https://github.com/nihlen/bf2srvWAdmin).
-
 A Battlefield 2 mod server with administration through a web interface, Discord and BF2CC.
 
 ## Features
@@ -224,3 +222,5 @@ appsecrets.json
   }
 }
 ```
+
+Dockerized Battlefield 2 server based on [nihlen/bf2vWebAdmin](https://github.com/nihlen/bf2srvWAdmin).
