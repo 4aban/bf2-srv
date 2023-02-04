@@ -88,8 +88,9 @@ service php7.0-fpm start
 
 # Start Battlefield 2 server && BF2CC Daemon as the bf2 user
 echo "Starting Battlefield 2 server..."
-echo 'Starting BF2CC Daemon...'
+# echo 'Starting BF2CC Daemon...'
 export TERM=xterm
-su -c "cd $SRV && ./mono-1.1.12.1/bin/mono ./bf2ccd/bf2ccd.exe -noquitprompts -autostart >bf2.log" - bf2
+su -c "cd $SRV && ./start_bf2hub.sh >bf2.log" - bf2
+# su -c "cd $SRV && ./mono-1.1.12.1/bin/mono ./bf2ccd/bf2ccd.exe -noquitprompts -autostart >bf2.log" - bf2
 
 exit 0

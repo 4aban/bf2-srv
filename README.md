@@ -1,6 +1,6 @@
 # BF2 Web Admin
 
-A Battlefield 2 mod server with administration through a web interface, Discord and BF2CC.
+A Battlefield 2 mod server with administration through a web interface and Discord.
 
 ## Features
 * Administration through the web UI
@@ -19,7 +19,6 @@ A Battlefield 2 mod server with administration through a web interface, Discord 
   * Chopper Mayhem module with base protection
   * Map module for server-side modding of maps by adding buildings ingame and saving/loading your work
   * Log module to log chat and game events to file
-* Administration through the BF2CC
 * Other random ingame commands
 
 ## Usage
