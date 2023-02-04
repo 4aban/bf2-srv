@@ -66,7 +66,7 @@ else
     rcon_pw="${ENV_RCON_PASSWORD:-"$(generate_pw)"}"
     bf2ccd_pw="${ENV_BF2CCD_PASSWORD:-"$(generate_pw)"}"
     bf2ccd_pw_md5="$(echo -n $bf2ccd_pw | md5sum | tr a-z A-Z | tr -d - | xargs echo -n)"
-    replace_var '{{server_name}}' "${ENV_SERVER_NAME:-"bf2-docker"}" "$SRV/mods/bf2/settings/serversettings.con"
+    replace_var '{{server_name}}' "${ENV_SERVER_NAME:-"-=[TV]BUG2.[RU]=-"}" "$SRV/mods/bf2/settings/serversettings.con"
     replace_var '{{max_players}}' "${ENV_MAX_PLAYERS:-"16"}" "$SRV/mods/bf2/settings/serversettings.con"
     replace_var '{{server_port}}' "${ENV_SERVER_PORT:-"16567"}" "$SRV/mods/bf2/settings/serversettings.con"
     replace_var '{{server_port}}' "${ENV_SERVER_PORT:-"16567"}" "$SRV/bf2ccd/default.profile"

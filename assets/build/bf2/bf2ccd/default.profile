@@ -14,7 +14,7 @@
   </ServerInfo>
   <GameInfo>
     <GameInfoID>1</GameInfoID>
-    <ServerName>bf2-docker</ServerName>
+    <ServerName>-=[TV]BUG2.[RU]=-</ServerName>
     <ServerPassword />
     <AllowFreeCam>true</AllowFreeCam>
     <AllowExternalViews>true</AllowExternalViews>
