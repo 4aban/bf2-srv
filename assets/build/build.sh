@@ -32,13 +32,13 @@ chmod +x $INSTALLER ./extract
 ./extract
 
 # Download maps from nihlen.net
-# NMAPS=('dalian_2_v_2.zip' 'daqing_2_v_2.zip' 'sharqi_2_v_2.zip' 'dragon_2_v_2.zip' '2_v_2_island.zip' '2_v_2_arena.zip' '2v2_ultimate_destination.zip' 'bloody_battle_2_v_2.zip' 'choppa_match.zip' 'cp_abadan.zip' 'darksome_2v2_dalian.zip' 'mash_2_v_2.zip' 'dalian_2_v_2_even.zip' 'dalian_2_v_2_revive.zip' 'daqing_2_v_2_novel.zip' 'dalian_o48.zip' 'nightfall_2_v_2.zip' 'operation2_v_2.zip' 'gulf_of_pwnin_2v2.zip' 'fushe_pass_2v2.zip' '1_sharqi_2v2.zip' 'tactical_zone2_v_2.zip' 'idf_mashtuur_chopper.zip' 'nm_karkand_choppers.zip' 'dogfighting.zip' 'idf_kubra_dam.zip' 'idf_arena.zip' 'idf_gulf.zip' 'tank_battle.zip')
+NMAPS=('dalian_2_v_2.zip' 'daqing_2_v_2.zip' 'sharqi_2_v_2.zip' 'dragon_2_v_2.zip' '2_v_2_island.zip' '2_v_2_arena.zip' '2v2_ultimate_destination.zip' 'bloody_battle_2_v_2.zip' 'choppa_match.zip' 'cp_abadan.zip' 'darksome_2v2_dalian.zip' 'mash_2_v_2.zip' 'dalian_2_v_2_even.zip' 'dalian_2_v_2_revive.zip' 'daqing_2_v_2_novel.zip' 'dalian_o48.zip' 'nightfall_2_v_2.zip' 'operation2_v_2.zip' 'gulf_of_pwnin_2v2.zip' 'fushe_pass_2v2.zip' '1_sharqi_2v2.zip' 'tactical_zone2_v_2.zip' 'idf_mashtuur_chopper.zip' 'nm_karkand_choppers.zip' 'dogfighting.zip' 'idf_kubra_dam.zip' 'idf_arena.zip' 'idf_gulf.zip' 'tank_battle.zip')
 
-# for i in "${NMAPS[@]}"; do
-#     wget https://static.nihlen.net/bf2/maps/$i -O "$TMP/srv/mods/bf2/levels/$i"
-#     unzip "$TMP/srv/mods/bf2/levels/$i" -d "$TMP/srv/mods/bf2/levels/"
-#     rm "$TMP/srv/mods/bf2/levels/$i"
-# done
+for i in "${NMAPS[@]}"; do
+    wget https://static.nihlen.net/bf2/maps/$i -O "$TMP/srv/mods/bf2/levels/$i"
+    unzip "$TMP/srv/mods/bf2/levels/$i" -d "$TMP/srv/mods/bf2/levels/"
+    rm "$TMP/srv/mods/bf2/levels/$i"
+done
 
 # Move BF2Hub files into server directory
 tar -xvf $BF2HUB_TGZ -C "$TMP/srv"
