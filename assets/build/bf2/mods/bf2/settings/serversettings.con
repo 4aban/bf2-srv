@@ -11,7 +11,7 @@ sv.allowNoseCam 1
 sv.hitIndicator 1
 sv.maxPlayers {{max_players}}
 sv.numPlayersNeededToStart 2
-sv.notEnoughPlayersRestartDelay 15
+sv.notEnoughPlayersRestartDelay 5
 sv.startDelay 5
 sv.endDelay 5
 sv.spawnTime 1
