@@ -11,7 +11,7 @@ RUN bash -x ./build.sh
 # Runtime stage
 FROM debian:stretch-slim AS runtime
 WORKDIR /home/bf2/tmp
-LABEL maintainer=nihlen
+LABEL maintainer=4aban
 
 # Environment variables
 ENV SERVER_NAME="bf2-srv"
